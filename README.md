@@ -1,4 +1,4 @@
-# Simple Mirror 照下鏡 / 就是鏡
+# Simple Mirror 照下鏡／就是鏡
 
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--09--20-brightgreen.svg)](https://github.com/tomfong/simple_mirror)
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)](https://flutter.dev/)
@@ -17,9 +17,9 @@ See yourself as others see you.
 
 讓你看見別人眼中的自己。
 
-| Google Play | GitHub |
-|:-:|:-:|
-| Coming soon | [Repository](https://github.com/tomfong/simple_mirror) |
+| Android | iOS / Web App | GitHub | 
+|:-:|:-:|:-:|
+| [<img src="https://raw.githubusercontent.com/tomfong/simple_mirror/main/.github/images/google-play-badge.png" height="50">](https://play.google.com/store/apps/details?id=com.tomfong.simplemirror) | [<img src="https://raw.githubusercontent.com/tomfong/simple_mirror/main/.github/images/pwa-badge.png" height="50">](https://simple-mirror.pages.dev/) | [<img src="https://raw.githubusercontent.com/tomfong/simple_mirror/main/.github/images/github-badge.png" height="50">](https://github.com/tomfong/simple_mirror/releases/latest) | 
 
 Author: Tom FONG
 
@@ -39,10 +39,24 @@ Author: Tom FONG
 ## Platforms
 
 - Android / Google Play
-- iOS / Apple App Store
+- iOS (PWA only)
 - Web / PWA
 
 For web deployment, serve the app through HTTPS. Browsers require a secure context before allowing camera access.
+
+## Install
+
+### Android
+
+Install from [Google Play](https://play.google.com/store/apps/details?id=com.tomfong.simplemirror).
+
+### iOS / PWA
+
+Open [Simple Mirror](https://simple-mirror.pages.dev/) in Safari, tap the Share button, then select **Add to Home Screen**. The app will open as a PWA from the home screen.
+
+### Web / PWA
+
+Open [simple-mirror.pages.dev](https://simple-mirror.pages.dev/) in a modern browser. Camera access requires HTTPS and browser permission.
 
 ## Build The Project
 

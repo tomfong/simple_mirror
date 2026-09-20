@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:camera/camera.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -394,13 +395,34 @@ class _CameraPreview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (controller?.value.isInitialized == true) {
-      return Center(
-        child: Transform(
-          alignment: Alignment.center,
-          transform: Matrix4.diagonal3Values(isFlipped ? -1 : 1, 1, 1),
-          child: CameraPreview(controller!),
-        ),
+      final preview = Transform(
+        alignment: Alignment.center,
+        transform: Matrix4.diagonal3Values(isFlipped ? -1 : 1, 1, 1),
+        child: CameraPreview(controller!),
       );
+      if (kIsWeb) {
+        return LayoutBuilder(
+          builder: (context, constraints) {
+            final side = constraints.biggest.shortestSide;
+            return Center(
+              child: SizedBox.square(
+                dimension: side,
+                child: ClipRect(
+                  child: FittedBox(
+                    fit: BoxFit.cover,
+                    child: SizedBox(
+                      width: controller!.value.aspectRatio,
+                      height: 1,
+                      child: preview,
+                    ),
+                  ),
+                ),
+              ),
+            );
+          },
+        );
+      }
+      return Center(child: preview);
     }
     return ColoredBox(
       color: Colors.black,
