@@ -403,18 +403,28 @@ class _CameraPreview extends StatelessWidget {
       if (kIsWeb) {
         return LayoutBuilder(
           builder: (context, constraints) {
-            final side = constraints.biggest.shortestSide;
-            return Center(
-              child: SizedBox.square(
-                dimension: side,
-                child: ClipRect(
-                  child: FittedBox(
-                    fit: BoxFit.cover,
-                    child: SizedBox(
-                      width: controller!.value.aspectRatio,
-                      height: 1,
-                      child: preview,
-                    ),
+            final viewportWidth = constraints.maxWidth;
+            final viewportHeight = constraints.maxHeight;
+            final viewportAspectRatio = viewportWidth / viewportHeight;
+            final cameraAspectRatio = controller!.value.aspectRatio;
+            final videoWidth = viewportAspectRatio < cameraAspectRatio
+                ? viewportHeight * cameraAspectRatio
+                : viewportWidth;
+            final videoHeight = viewportAspectRatio < cameraAspectRatio
+                ? viewportHeight
+                : viewportWidth / cameraAspectRatio;
+            return SizedBox.expand(
+              child: ClipRect(
+                child: OverflowBox(
+                  alignment: Alignment.center,
+                  minWidth: videoWidth,
+                  maxWidth: videoWidth,
+                  minHeight: videoHeight,
+                  maxHeight: videoHeight,
+                  child: SizedBox(
+                    width: videoWidth,
+                    height: videoHeight,
+                    child: preview,
                   ),
                 ),
               ),

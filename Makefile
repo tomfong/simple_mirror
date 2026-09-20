@@ -44,7 +44,7 @@ run-web: ## Serve the Web app locally; selects the next free port from WEB_PORT.
 	$(FLUTTER) run -d web-server --web-port $$port
 
 build-android: ## Build a release Android APK.
-	$(FLUTTER) build apk
+	$(FLUTTER) build apk --release
 
 build-ios: ## Build an unsigned iOS app for local verification.
 	$(FLUTTER) build ios --no-codesign
