@@ -1,0 +1,29 @@
+name: simple_mirror
+description: "A simple app that lets you see yourself as others see you, in real time."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  camera: ^0.12.1
+  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.5.3
+  url_launcher: ^6.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+
+  uses-material-design: true
+  assets:
+    - assets/icons/app-icon-nobg-1000.png
