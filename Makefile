@@ -60,3 +60,6 @@ doctor: ## Print Flutter environment diagnostics.
 
 outdated: ## List dependencies with newer available versions.
 	$(FLUTTER) pub outdated
+
+deploy-web: ## Deploy the Web app to the production environment.
+	$(FLUTTER) build web --release && npx wrangler pages deploy build/web --project-name simple-mirror
