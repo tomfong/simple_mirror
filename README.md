@@ -2,12 +2,20 @@
 
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--09--20-brightgreen.svg)](https://github.com/tomfong/simple_mirror)
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)](https://flutter.dev/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 <p align="center">
 	<img src="web/icons/Icon-512.png" alt="Simple Mirror app icon" width="128"><br>
 	<strong>Simple Mirror</strong><br>
 	A simple app that lets you see yourself as others see you, in real time.
 </p>
+<br>
+<p align="center">
+  <img height="300" src="https://raw.githubusercontent.com/tomfong/simple_mirror/main/.github/images/01.jpg">
+  <img height="300" src="https://raw.githubusercontent.com/tomfong/simple_mirror/main/.github/images/02.jpg">
+  <img height="300" src="https://raw.githubusercontent.com/tomfong/simple_mirror/main/.github/images/03.jpg">
+</p>
+
 
 ## About
 
@@ -17,7 +25,7 @@ See yourself as others see you.
 
 讓你看見別人眼中的自己。
 
-| Android | iOS / Web App | GitHub | 
+| Android | iOS / Web | GitHub | 
 |:-:|:-:|:-:|
 | [<img src="https://raw.githubusercontent.com/tomfong/simple_mirror/main/.github/images/google-play-badge.png" height="50">](https://play.google.com/store/apps/details?id=com.tomfong.simplemirror) | [<img src="https://raw.githubusercontent.com/tomfong/simple_mirror/main/.github/images/pwa-badge.png" height="50">](https://simple-mirror.pages.dev/) | [<img src="https://raw.githubusercontent.com/tomfong/simple_mirror/main/.github/images/github-badge.png" height="50">](https://github.com/tomfong/simple_mirror/releases/latest) | 
 
@@ -93,11 +101,18 @@ make build-web
 
 Simple Mirror requests camera permission only to show the live mirror preview. It does not take photos, record video, upload camera content, or collect personal data.
 
+## License
+
+Simple Mirror is released under the [MIT License](LICENSE).
+
 ## Contribute
 
 - Open an issue for bugs or ideas at [GitHub Issues](https://github.com/tomfong/simple_mirror/issues).
 - Star the [repository](https://github.com/tomfong/simple_mirror).
-- Help translate the app into additional languages.
+- Sponsor the project.
+
+  [![GitHub Sponsor](https://img.shields.io/badge/sponsor-30363D?style=flat&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/tomfong?frequency=one-time)
+  [![Buy me a Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/tomfong)
 
 ---
 
